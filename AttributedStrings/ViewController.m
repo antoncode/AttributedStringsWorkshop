@@ -10,6 +10,7 @@
 
 @interface ViewController ()
             
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -17,12 +18,24 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+//    NSDictionary *attributes = @{NSForegroundColorAttributeName:    [UIColor redColor]};
+    
+//    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"The Republic by Plato"
+//                                                                           attributes:attributes];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"The Republic by Plato"];
+    
+    NSRange rangeOfTitle = [attributedString.string rangeOfString:@"The Republic"];
+    [attributedString addAttribute:NSForegroundColorAttributeName
+                             value:[UIColor redColor]
+                             range:rangeOfTitle];
+    
+    NSRange rangeOfAuthor = [attributedString.string rangeOfString:@"Plato"];
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Italic" size:self.label.font.pointSize];
+    [attributedString addAttribute:NSFontAttributeName value:font range:rangeOfAuthor];
+    
+    self.label.attributedText = attributedString;
 }
 
 @end

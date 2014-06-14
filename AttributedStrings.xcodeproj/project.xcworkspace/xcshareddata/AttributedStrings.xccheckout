@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57861CAE-8627-4FA7-9EAE-FE90B003E852</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AttributedStrings</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D18F671F-DD81-4469-B7DC-FB547887DFEA</key>
+		<string>ssh://github.com/antoncode/AttributedStringsWorkshop.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AttributedStrings.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D18F671F-DD81-4469-B7DC-FB547887DFEA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/antoncode/AttributedStringsWorkshop.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D18F671F-DD81-4469-B7DC-FB547887DFEA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D18F671F-DD81-4469-B7DC-FB547887DFEA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AttributedStringsWorkshop</string>
+		</dict>
+	</array>
+</dict>
+</plist>
