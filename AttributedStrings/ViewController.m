@@ -24,18 +24,51 @@
 //    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"The Republic by Plato"
 //                                                                           attributes:attributes];
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"The Republic by Plato"];
+//    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"The Republic by Plato"];
+
     
-    NSRange rangeOfTitle = [attributedString.string rangeOfString:@"The Republic"];
+//    NSRange rangeOfTitle = [attributedString.string rangeOfString:@"The Republic"];
+//    [attributedString addAttribute:NSForegroundColorAttributeName
+//                             value:[UIColor redColor]
+//                             range:rangeOfTitle];
+    
+//    NSRange rangeOfAuthor = [attributedString.string rangeOfString:@"Plato"];
+//    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Italic" size:self.label.font.pointSize];
+//    [attributedString addAttribute:NSFontAttributeName value:font range:rangeOfAuthor];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"The Hobbit by Tolkien"];
+    
+    NSRange rangeOfBy = [attributedString.string rangeOfString:@"by"];
+    
+    NSRange rangeOfTitle = NSMakeRange(0, rangeOfBy.location);
     [attributedString addAttribute:NSForegroundColorAttributeName
                              value:[UIColor redColor]
                              range:rangeOfTitle];
     
-    NSRange rangeOfAuthor = [attributedString.string rangeOfString:@"Plato"];
-    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Italic" size:self.label.font.pointSize];
-    [attributedString addAttribute:NSFontAttributeName value:font range:rangeOfAuthor];
+    NSUInteger lengthOfAuthor = [attributedString.string length] - NSMaxRange(rangeOfBy);
+    NSRange rangeOfAuthor = NSMakeRange(NSMaxRange(rangeOfBy), lengthOfAuthor);
+
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Italic"
+                                   size:self.label.font.pointSize];
+    [attributedString addAttribute:NSFontAttributeName
+                             value:font
+                             range:rangeOfAuthor];
+
     
     self.label.attributedText = attributedString;
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
