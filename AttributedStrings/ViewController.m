@@ -19,14 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSDictionary *attributes = @{NSForegroundColorAttributeName:    [UIColor redColor]};
-    
+//    NSDictionary *attributes = @{NSForegroundColorAttributeName:    [UIColor redColor]};    
 //    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"The Republic by Plato"
 //                                                                           attributes:attributes];
     
+    
 //    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"The Republic by Plato"];
 
-    
 //    NSRange rangeOfTitle = [attributedString.string rangeOfString:@"The Republic"];
 //    [attributedString addAttribute:NSForegroundColorAttributeName
 //                             value:[UIColor redColor]
