@@ -24,7 +24,7 @@
 
 //    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:@"Speech"];
     
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"Speech" attributes:_titleAttributes];
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"Speech" attributes:self.titleAttributes];
     
 //    UIFont *font = [UIFont fontWithName:@"DamascusBold" size:48.0f];
 //    NSRange rangeOfTitle = NSMakeRange(0, [title.string length]);
@@ -46,6 +46,23 @@
 //                   range:rangeOfTitle];
 
     self.label.attributedText = title;
+
+    
+    NSAttributedString *paragraph  = [[NSAttributedString alloc] initWithString:self.textView.text attributes:[self paragraphAttributes]];
+    
+    
+    
+    self.textView.attributedText = paragraph;
+}
+
+- (NSDictionary *)paragraphAttributes
+{
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.firstLineHeadIndent = 10.0f;
+    paragraphStyle.lineSpacing = 10.0f;
+    paragraphStyle.paragraphSpacing = 10.0f;
+    
+    return @{NSParagraphStyleAttributeName  :   paragraphStyle};
 }
 
 - (NSDictionary *)titleAttributes
